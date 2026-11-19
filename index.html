@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Attention Protector</title>
+  <style>
+    :root {
+      --bg: #ebf5ee;
+      --card: #f9fdf9;
+      --wood: #efe0ce;
+      --green: #1b5e3a;
+      --green-bright: #2e7d32;
+      --torii: #d9381e;
+      --ink: #14261c;
+      --muted: #4e5d52;
+      --wood-ink: #3e2723;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 32px 16px 64px;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    header {
+      background: linear-gradient(135deg, #2e7d32, #1b5e3a);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 28px 28px 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffd54f;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 14px;
+    }
+    section {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 22px 24px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: var(--green);
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    ul {
+      padding-left: 20px;
+      margin: 8px 0 0;
+    }
+    .callout {
+      background: var(--wood);
+      color: var(--wood-ink);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    code {
+      background: rgba(27, 94, 58, 0.08);
+      color: var(--green);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.92em;
+    }
+    a { color: var(--green-bright); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="badge">100% OFFLINE • ZERO NETWORK PERMISSION</div>
+      <h1>Privacy Policy — Attention Protector</h1>
+      <p>Package: <code>com.attentionprotector.app</code> &bull; Effective: November 18, 2026 &bull; Last Updated: November 19, 2026</p>
+    </header>
+
+    <section>
+      <h2>1. Core Privacy Guarantee: Zero Network Access</h2>
+      <p>
+        Attention Protector is built so your attention habits, app usage, and personal communications never leave your phone.
+      </p>
+      <ul>
+        <li><strong>No <code>INTERNET</code> Permission:</strong> The app does not request <code>android.permission.INTERNET</code> or <code>android.permission.ACCESS_NETWORK_STATE</code>. Android OS physically blocks any outbound or inbound network traffic.</li>
+        <li><strong>Zero Analytics, Crash Telemetry, or Ads:</strong> Contains zero tracking SDKs, cloud backends, accounts, or ad networks.</li>
+        <li><strong>Cloud Backup Disabled:</strong> Local statistics stay on-device only (<code>android:allowBackup="false"</code>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Android AccessibilityService Disclosure</h2>
+      <p>
+        Android provides no standard API to distinguish specific feeds inside another app (such as Instagram Reels vs. Direct Messages, or YouTube Shorts vs. educational videos).
+        When enabled, Attention Protector uses <code>AccessibilityService</code> (<code>android:isAccessibilityTool="false"</code>) strictly on-device.
+      </p>
+      <ul>
+        <li><strong>OS-Level Package Filtering:</strong> Events are scoped exclusively to the guarded entertainment, shopping, news, or custom apps you turn on via <code>serviceInfo.packageNames</code>. Banking apps, keyboards, launchers, and unguarded apps never deliver events.</li>
+        <li><strong>What Is Read Ephemerally in RAM:</strong> Public UI view IDs, class names, selection states, short descriptions, and layout bounds strictly to detect guarded feeds or draw a non-touchable visual mask (<code>TYPE_ACCESSIBILITY_OVERLAY</code>) over inline Home-feed Reels when enabled.</li>
+        <li><strong>What Is Never Read or Saved:</strong> Keystrokes, passwords, PINs, personal chat content, posts, screenshots, or financial credentials are never read, recorded, or transmitted.</li>
+      </ul>
+      <div class="callout">
+        All accessibility tree inspection happens transiently in volatile memory and is discarded immediately.
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Optional Notification Listener Access</h2>
+      <p>
+        If you choose to enable the optional <strong>Unreplied Chat Shortcuts</strong> feature, Attention Protector observes active notification sender names and reply intents from personal messaging apps (WhatsApp, Messenger, Instagram DMs, Zalo, SMS) solely in RAM to let you jump back into pending conversations.
+      </p>
+      <ul>
+        <li>Banking alerts, OTP codes, and system alerts are filtered out immediately.</li>
+        <li>No notification message body is stored on disk or transmitted. Core blocking works 100% without this permission.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Local Data Storage &amp; Deletion Controls</h2>
+      <p>
+        Only local summary counts, outcomes (<code>RESISTED</code>, <code>REDIRECTED</code>, <code>PUSHED_THROUGH</code>), and your preferences are stored in private on-device storage.
+      </p>
+      <ul>
+        <li><strong>Instant In-App Purge:</strong> Tap <em>Settings &rarr; Emergency &amp; Data Controls &rarr; Clear Activity History</em> to delete all local activity records immediately.</li>
+        <li><strong>OS Reset / Uninstall:</strong> Clearing app storage in Android Settings or uninstalling the app permanently removes all data.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Children's Privacy &amp; Contact</h2>
+      <p>
+        Attention Protector is intended for individuals aged 13 and older and does not knowingly market to or collect data from children under 13.
+      </p>
+      <p>
+        <strong>Support Email:</strong> <a href="mailto:quochuydinh.94@gmail.com">quochuydinh.94@gmail.com</a><br />
+        <strong>Online Policy URL:</strong> <a href="https://quochuy-94.github.io/attention-protector-privacy/privacy-policy.html">https://quochuy-94.github.io/attention-protector-privacy/privacy-policy.html</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
